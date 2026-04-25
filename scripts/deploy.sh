@@ -2,9 +2,9 @@
 
 cd /home/ec2-user/buildright
 
-docker compose down || true
+docker-compose down || true
 
 docker pull hrushant1909/sefinalproject-frontend:1.0.0
 docker pull hrushant1909/sefinalproject-backend:1.0.0
 
-docker compose up -d
+docker-compose up -d
