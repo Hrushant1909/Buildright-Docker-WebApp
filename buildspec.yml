@@ -23,5 +23,6 @@ phases:
 artifacts:
   files:
     - appspec.yml
-    - scripts/**/*
     - docker-compose.yml
+    - scripts/**/*
+  name: buildright-deployment-artifact
