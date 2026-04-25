@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export PATH=$PATH:/usr/local/bin
+
 cd /home/ec2-user/buildright
 
 docker-compose down || true
