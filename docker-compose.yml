@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+
+  backend:
+    image: hrushant1909/sefinalproject-backend:1.0.0
+    container_name: buildright-backend
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://buildright.cfugowg0e22z.ap-south-1.rds.amazonaws.com:3306/buildrightdb
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: hrushant1909
+    restart: always
+
+  frontend:
+    image: hrushant1909/sefinalproject-frontend:1.0.0
+    container_name: buildright-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    restart: always
